@@ -472,10 +472,10 @@ func (pb *ProgressBar) render() (result string, width int) {
 	pb.state.current = pb.Current()
 	pb.buf.Reset()
 
-	if e := pb.tmpl.Execute(pb.buf, pb.state); e != nil {
-		pb.SetErr(e)
-		return "", 0
-	}
+	// if e := pb.tmpl.Execute(pb.buf, pb.state); e != nil {
+	// 	pb.SetErr(e)
+	// 	return "", 0
+	// }
 
 	result = pb.buf.String()
 
